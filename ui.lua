@@ -4,13 +4,13 @@ local TS = game:GetService("TweenService")
 
 -- Initialisation --
 for i, v in ipairs(CG:GetChildren()) do
-    if v.Name == "Stingray" then
+    if v.Name == "VuongPro" then
         v:Destroy()
     end
 end
 
 local SG = Instance.new("ScreenGui")
-SG.Name = "Stingray"
+SG.Name = "VuongPro"
 SG.Parent = CG
 
 local Pages = {}
