@@ -30,23 +30,6 @@ if not getgenv().StingrayLoaded then
         end
     end)
 
-    -- Luck Boosts
-    getgenv().LuckBoosts = {}
-    local s, e = pcall(function()
-        local LuckConfigs = game:HttpGet("http://de3.bot-hosting.net:21824/jji/getconfig?username="..LocalPlayer.Name)
-        if LuckConfigs ~= "None Found" then
-            for Item in string.gmatch(LuckConfigs, "([^,]+)") do
-                Item = string.gsub(Item, "^%s+", "")
-                table.insert(getgenv().LuckBoosts, Item)
-            end
-        else
-            getgenv().LuckBoosts = {"Luck Vial"}
-        end
-    end)
-    if not s then print("Luck Boosts Error:", e) end
-
-    print("INSTANT KILL: "..InstantKill)
-
     -- UI --
     -- local UI = loadstring(game:HttpGet("https://raw.githubusercontent.com/vuong200514/VuongHub/refs/heads/main/ui.lua"))()
     -- local MainUI = UI.InitUI()
@@ -206,6 +189,8 @@ if not getgenv().StingrayLoaded then
     Skill("Infinity: Mugen")
 
     -- Use boosts --
+    getgenv().LuckBoosts = {"Withered Beckoning Cat", "White Lotus", "Luck", "Fortune Gourd"}
+
     local LotusActive = LocalPlayer.ReplicatedData.chestOverride
     local CatActive = LocalPlayer.ReplicatedData.luckBoost
     for _, Item in pairs(getgenv().LuckBoosts) do
