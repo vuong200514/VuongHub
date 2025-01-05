@@ -33,31 +33,31 @@ if not getgenv().StingrayLoaded then
     -- Luck Boosts
     getgenv().LuckBoosts = {"Withered Beckoning Cat", "White Lotus", "Luck", "Fortune Gourd"}
     -- UI --
-    -- local UI = loadstring(game:HttpGet("https://raw.githubusercontent.com/vuong200514/VuongHub/refs/heads/main/ui.lua"))()
-    -- local MainUI = UI.InitUI()
-    -- local Toggle = "ON"
-    -- pcall(function()
-    --     if isfile("JJI_State.txt") then
-    --         Toggle = readfile("JJI_State.txt")
-    --     else
-    --         writefile("JJI_State.txt", "ON")
-    --     end
-    -- end)
-    -- print("QUEUE TOGGLE: "..Toggle)
-    -- if Toggle == "ON" then
-    --     UI.SetState(true)
-    -- else
-    --     UI.SetState(false)
-    -- end
-    -- UI.SetMain(function(State)
-    --     if State == 1 then
-    --         Toggle = "ON"
-    --     else
-    --         Toggle = "OFF"
-    --     end
-    --     writefile("JJI_State.txt", Toggle)
-    --     print(readfile("JJI_State.txt"))
-    -- end)
+    local UI = loadstring(game:HttpGet("https://raw.githubusercontent.com/vuong200514/VuongHub/refs/heads/main/ui.lua"))()
+    local MainUI = UI.InitUI()
+    local Toggle = "ON"
+    pcall(function()
+        if isfile("JJI_State.txt") then
+            Toggle = readfile("JJI_State.txt")
+        else
+            writefile("JJI_State.txt", "ON")
+        end
+    end)
+    print("QUEUE TOGGLE: "..Toggle)
+    if Toggle == "ON" then
+        UI.SetState(true)
+    else
+        UI.SetState(false)
+    end
+    UI.SetMain(function(State)
+        if State == 1 then
+            Toggle = "ON"
+        else
+            Toggle = "OFF"
+        end
+        writefile("JJI_State.txt", Toggle)
+        print(readfile("JJI_State.txt"))
+    end)
 
     -- Constants
     local Cats = {"Withered Beckoning Cat", "Wooden Beckoning Cat", "Polished Beckoning Cat"}
