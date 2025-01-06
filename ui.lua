@@ -52,7 +52,7 @@ Blank.Size = UDim2.new(1, 0, 1, 0)
 Blank.ZIndex = 1
 
 local MainToggleCover = Instance.new("ImageLabel", MainFrame)
-MainToggleCover.Image = "http://www.roblox.com/asset/?id=91450257680054"
+MainToggleCover.Image = "http://www.roblox.com/asset/?id=103244936096633"
 MainToggleCover.Size = UDim2.new(0.81, 0, 0.17, 0)
 MainToggleCover.Position = UDim2.new(0.5, 0, 0.85, 0)
 MainToggleCover.AnchorPoint = Vector2.new(0.5, 0.5)
