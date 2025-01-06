@@ -8,6 +8,15 @@ if not getgenv().StingrayLoaded then
     local LocalPlayer = game:GetService("Players").LocalPlayer
 
     -- Load Configs --
+    -- Webhook
+    pcall(function()
+        if getgenv().Webhook then
+            writefile("JJI_Webhook.txt", getgenv().Webhook)
+        end
+        if readfile("JJI_Webhook.txt") then
+            getgenv().Webhook = readfile("JJI_Webhook.txt")
+        end
+    end)
 
     -- Luck Boosts
     getgenv().LuckBoosts = {"Withered Beckoning Cat", "White Lotus", "Luck Vial", "Fortune Gourd"}
@@ -181,10 +190,11 @@ if not getgenv().StingrayLoaded then
     end
 
     -- Skill spam --
+    task.wait(0.5)
     if InstantKill ~= "ON" then
         repeat
             Skill("Incomplete Domain")
-            task.wait(2)
+            task.wait(3)
         until Effects:FindFirstChild("DomainSphere")
         task.spawn(function()
             while Mobs:FindFirstChild(Boss) do
@@ -215,6 +225,7 @@ if not getgenv().StingrayLoaded then
         end
     end)
     task.spawn(function()
+        task.wait(0.5)
         while Drops:FindFirstChild("Chest") or LootUI.Enabled do
             if not LootUI.Enabled then
                 OpenChest()
@@ -230,8 +241,9 @@ if not getgenv().StingrayLoaded then
     -- Send webhook message --
     pcall(function()
         if getgenv().Webhook then
+            task.wait(1)
             local embed = {
-                ["title"] = "KhoaNgu" .. " has defeated " .. Boss .. " in " .. tostring(math.floor((tick() - StartTime) * 10) / 10) .. " seconds",
+                ["title"] = "Khoa_Ngu" .. " has defeated " .. Boss .. " in " .. tostring(math.floor((tick() - StartTime) * 10) / 10) .. " seconds",
                 ['description'] = "Collected Items: " .. Items,
                 ["color"] = tonumber(0x51e2f5)
             }
