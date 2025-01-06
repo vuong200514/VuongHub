@@ -33,13 +33,13 @@ local MainFrameConstraint = Instance.new("UIAspectRatioConstraint", MainFrame)
 MainFrameConstraint.AspectRatio = 2 / 3
 
 local MainBackground = Instance.new("ImageLabel", MainFrame)
-MainBackground.Image = "http://www.roblox.com/asset/?id=119724970027478"
+MainBackground.Image = "http://www.roblox.com/asset/?id=91450257680054"
 MainBackground.Size = UDim2.new(1, 0, 1, 0)
 MainBackground.BackgroundTransparency = 1
 MainBackground.Name = "MainBackground"
 
 local MainToggle = Instance.new("ImageLabel", MainFrame)
-MainToggle.Image = "http://www.roblox.com/asset/?id=74152053163281"
+MainToggle.Image = "http://www.roblox.com/asset/?id=91450257680054"
 MainToggle.Size = UDim2.new(0.81, 0, 0.17, 0)
 MainToggle.Position = UDim2.new(0.5, 0, 0.85, 0)
 MainToggle.AnchorPoint = Vector2.new(0.5, 0.5)
