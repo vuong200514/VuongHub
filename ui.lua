@@ -116,7 +116,7 @@ local function NewPage(ButtonImage, PageTitle)
     PageFrame.Name = PageTitle .. "_CoverFrame"
 
     local PageCover = Instance.new("ImageLabel", PageFrame)
-    PageCover.Image = "http://www.roblox.com/asset/?id=118283110203453"
+    PageCover.Image = "http://www.roblox.com/asset/?id=89733487687992"
     PageCover.Size = UDim2.new(0, Page.AbsoluteSize.X, 0, Page.AbsoluteSize.Y)
     PageCover.Position = UDim2.new(0, 0, 1, 0)
     PageCover.AnchorPoint = Vector2.new(0, 1)
