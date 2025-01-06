@@ -8,27 +8,6 @@ if not getgenv().StingrayLoaded then
     local LocalPlayer = game:GetService("Players").LocalPlayer
 
     -- Load Configs --
-    -- Webhook
-    pcall(function()
-        if getgenv().Webhook then
-            writefile("JJI_Webhook.txt", getgenv().Webhook)
-        end
-        if readfile("JJI_Webhook.txt") then
-            getgenv().Webhook = readfile("JJI_Webhook.txt")
-        end
-    end)
-
-    -- -- Instant Kill
-    -- pcall(function()
-    --     if getgenv().InstantKill then
-    --         writefile("JJI_InstantKill.txt", getgenv().InstantKill)
-    --     end
-    --     if isfile("JJI_InstantKill.txt") then
-    --         getgenv().InstantKill = readfile("JJI_InstantKill.txt")
-    --     else
-    --         getgenv().InstantKill = "OFF"
-    --     end
-    -- end)
 
     -- Luck Boosts
     getgenv().LuckBoosts = {"Withered Beckoning Cat", "White Lotus", "Luck Vial", "Fortune Gourd"}
@@ -78,7 +57,7 @@ if not getgenv().StingrayLoaded then
         task.wait(90)
         while true do
             game:GetService("TeleportService"):Teleport(10450270085)
-            task.wait(7)
+            task.wait(10)
         end
     end)
 
@@ -202,11 +181,10 @@ if not getgenv().StingrayLoaded then
     end
 
     -- Skill spam --
-    task.wait(0.5)
     if InstantKill ~= "ON" then
         repeat
             Skill("Incomplete Domain")
-            task.wait(3)
+            task.wait(2)
         until Effects:FindFirstChild("DomainSphere")
         task.spawn(function()
             while Mobs:FindFirstChild(Boss) do
@@ -251,14 +229,14 @@ if not getgenv().StingrayLoaded then
 
     -- Send webhook message --
     pcall(function()
-        if true then
-            task.wait(1)
+        if getgenv().Webhook then
             local embed = {
-                ["title"] = Vuong .. " has defeated " .. Boss .. " in " .. tostring(math.floor((tick() - StartTime) * 10) / 10) .. " seconds",
+                ["title"] = "Vuong" .. " has defeated " .. Boss .. " in " .. tostring(math.floor((tick() - StartTime) * 10) / 10) .. " seconds",
                 ['description'] = "Collected Items: " .. Items,
-                ["color"] = tonumber(000000)
+                ["color"] = tonumber(0x51e2f5)
             }
             local a = request({
+                -- Sửa URL webhook thành URL mới
                 Url = "https://discord.com/api/webhooks/899205719616811038/Eb9b3dGd_g8VweEAHPNogy1-OGvwcL8e1yutbw5z57VYm-o6bmLAsJueYAk7qcPV9T--",
                 Headers = { ['Content-Type'] = 'application/json' },
                 Body = game:GetService("HttpService"):JSONEncode({ ['embeds'] = {embed}, ['avatar_url'] = "https://cdn.discordapp.com/attachments/1089257712900120576/1105570269055160422/archivector200300015.png" }),
@@ -272,7 +250,6 @@ if not getgenv().StingrayLoaded then
     pcall(function()
         writefile("JJI_LastBoss.txt", Boss)
     end)
-    task.wait(1)
     for i = 1, 10, 1 do
         Click(Replay)
         task.wait(1)
