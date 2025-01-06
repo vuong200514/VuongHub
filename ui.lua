@@ -371,6 +371,22 @@ end
 
 ToggleButton.MouseButton1Click:Connect(OnClick)
 
+local UserInputService = game:GetService("UserInputService")
+
+-- Function to toggle UI visibility
+local function ToggleUIVisibility()
+    SG.Enabled = not SG.Enabled
+end
+
+-- Detect key press
+UserInputService.InputBegan:Connect(function(input, gameProcessed)
+    if not gameProcessed then
+        if input.KeyCode == Enum.KeyCode.P then
+            ToggleUIVisibility()
+        end
+    end
+end)
+
 return {
     ["NewPage"] = NewPage,
     ["NewToggle"] = NewToggle,
