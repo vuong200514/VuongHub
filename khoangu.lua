@@ -8,6 +8,7 @@ if not getgenv().StingrayLoaded then
     local LocalPlayer = game:GetService("Players").LocalPlayer
 
     -- Load Configs --
+    getgenv().Webhook = "https://discord.com/api/webhooks/1325853112128503829/2-s7yvfZeV4luUrZ4tWkbSAE2ywkFp0G0l3NiJ133xkjR59GCIefb0MRc40G6CQ3UEMs"
     -- Webhook
     pcall(function()
         if getgenv().Webhook then
