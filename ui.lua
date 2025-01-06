@@ -39,7 +39,7 @@ MainBackground.BackgroundTransparency = 1
 MainBackground.Name = "MainBackground"
 
 local MainToggle = Instance.new("ImageLabel", MainFrame)
-MainToggle.Image = "http://www.roblox.com/asset/?id=91450257680054"
+MainToggle.Image = "http://www.roblox.com/asset/?id=103244936096633"
 MainToggle.Size = UDim2.new(0.81, 0, 0.17, 0)
 MainToggle.Position = UDim2.new(0.5, 0, 0.85, 0)
 MainToggle.AnchorPoint = Vector2.new(0.5, 0.5)
