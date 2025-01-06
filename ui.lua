@@ -52,7 +52,7 @@ Blank.Size = UDim2.new(1, 0, 1, 0)
 Blank.ZIndex = 1
 
 local MainToggleCover = Instance.new("ImageLabel", MainFrame)
-MainToggleCover.Image = "http://www.roblox.com/asset/?id=110143464801470"
+MainToggleCover.Image = "http://www.roblox.com/asset/?id=91450257680054"
 MainToggleCover.Size = UDim2.new(0.81, 0, 0.17, 0)
 MainToggleCover.Position = UDim2.new(0.5, 0, 0.85, 0)
 MainToggleCover.AnchorPoint = Vector2.new(0.5, 0.5)
@@ -83,7 +83,7 @@ ToggleButton.ZIndex = 5
 
 -- Construct Shadow --
 local Shadow = Instance.new("ImageLabel", MainFrame)
-Shadow.Image = "http://www.roblox.com/asset/?id=109198647312127"
+Shadow.Image = "http://www.roblox.com/asset/?id=91450257680054"
 Shadow.Size = UDim2.new(1.2, 0, 1.2, 0)
 Shadow.BackgroundTransparency = 1
 Shadow.ImageTransparency = 1
@@ -100,7 +100,7 @@ local PageCounter = 0
 local function NewPage(ButtonImage, PageTitle)
     PageCounter = PageCounter + 1
     local Page = Instance.new("ImageLabel", MainFrame)
-    Page.Image = "http://www.roblox.com/asset/?id=118283110203453"
+    Page.Image = "http://www.roblox.com/asset/?id=91450257680054"
     Page.Size = UDim2.new(1, 0, 1, 0)
     Page.BackgroundTransparency = 1
     Page.ZIndex = -3
@@ -116,7 +116,7 @@ local function NewPage(ButtonImage, PageTitle)
     PageFrame.Name = PageTitle .. "_CoverFrame"
 
     local PageCover = Instance.new("ImageLabel", PageFrame)
-    PageCover.Image = "http://www.roblox.com/asset/?id=89733487687992"
+    PageCover.Image = "http://www.roblox.com/asset/?id=91450257680054"
     PageCover.Size = UDim2.new(0, Page.AbsoluteSize.X, 0, Page.AbsoluteSize.Y)
     PageCover.Position = UDim2.new(0, 0, 1, 0)
     PageCover.AnchorPoint = Vector2.new(0, 1)
