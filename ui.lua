@@ -12,6 +12,7 @@ end
 local SG = Instance.new("ScreenGui")
 SG.Name = "VuongPro"
 SG.Parent = CG
+SG.Enabled = false
 
 local Pages = {}
 local Buttons = {}
