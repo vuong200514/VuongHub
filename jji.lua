@@ -231,7 +231,7 @@ if not getgenv().StingrayLoaded then
     pcall(function()
         if getgenv().Webhook then
             local embed = {
-                ["title"] = "Vuong" .. " has defeated " .. Boss .. " in " .. tostring(math.floor((tick() - StartTime) * 10) / 10) .. " seconds",
+                ["title"] = LocalPlayer.Name .. " has defeated " .. Boss .. " in " .. tostring(math.floor((tick() - StartTime) * 10) / 10) .. " seconds",
                 ['description'] = "Collected Items: " .. Items,
                 ["color"] = tonumber(0x51e2f5)
             }
